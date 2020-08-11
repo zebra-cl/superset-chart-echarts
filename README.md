@@ -19,9 +19,14 @@
         default: 'def get_opts(df):\n    return df.T.to_dict()',
     }
     ```
-4. 重新生成前端文件
+4. 安装依赖
     ```shell
-    npm install
+    npm install -d
+    npm install echarts-for-react
+    npm install echarts
+    ```
+5. 重新生成前端文件
+    ```shell
     npm run build
     ```
 #### 在后台注册插件
