@@ -17,6 +17,7 @@
  * under the License.
  */
 /* eslint-disable react/sort-prop-types */
+import 'echarts-gl';
 import ReactEcharts from 'echarts-for-react';
 import PropTypes from 'prop-types';
 import React from 'react';
