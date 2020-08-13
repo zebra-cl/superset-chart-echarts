@@ -24,6 +24,7 @@
     npm install -d
     npm install echarts-for-react
     npm install echarts
+    npm install echarts-gl
     ```
 5. 重新生成前端文件
     ```shell
