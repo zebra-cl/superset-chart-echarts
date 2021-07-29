@@ -1,4 +1,4 @@
-用于在superset中使用echarts
+用于在`superset==0.35.*`中使用`echarts`
 
 ## 安装
 #### 在前端注册插件
@@ -7,9 +7,11 @@
     ```js
     import EchartsChartPlugin from '../superset-chart-echarts/EchartsChartPlugin';
 
-    new EchartsChartPlugin()
-    .configure({ key: 'echarts' })
-    .register();
+    ...
+    plugins: [
+        ...
+        new EchartsChartPlugin().configure({ key: 'echarts' })
+    ],
     ```
 3. 在`../assets/src/explore/controls.jsx`中定义`control`：
     ```js
@@ -22,9 +24,9 @@
 4. 安装依赖
     ```shell
     npm install -d
-    npm install echarts-for-react
-    npm install echarts
-    npm install echarts-gl
+    npm install echarts-for-react@3.0.1
+    npm install echarts@5.1.2
+    npm install echarts-gl@2.0.7
     ```
 5. 重新生成前端文件
     ```shell
@@ -33,8 +35,7 @@
 #### 在后台注册插件
 ```python
 from importlib.util import spec_from_loader, module_from_spec
-
-from superset.viz import viz_types, TableViz
+# from superset.viz import viz_types, TableViz
 
 
 class EchartsViz(TableViz):
